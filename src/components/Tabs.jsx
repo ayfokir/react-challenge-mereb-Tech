@@ -47,8 +47,6 @@ const Tabs = () => {
         // Only fetch if not already cached
         const response = await fetch("https://thingproxy.freeboard.io/fetch/https://loripsum.net/api/paragraphs/1");
         let content = await response.text(); // API returns plain text
-        // console.log("see content", content);
-        // console.log("see response", response);
         content =  content.replace(/<p>|<\/p>/g, ''); // Replace <p> and </p> with empty string
         // setTabContent((prevContent) => ({
         //   ...prevContent,
